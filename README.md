@@ -8,8 +8,9 @@ This repository contains hands-on labs demonstrating core Infrastructure as Code
 ## 🎯 Architecture Goals & Use Cases Covered
 Based on AWS best practices (SAA-C03), these labs cover:
 * **Declarative Provisioning:** Defining infrastructure as code to ensure consistency and repeatability.
-* **Provider Configuration:** Setting up the AWS provider for LocalStack.
-* **Networking Foundation:** Provisioning VPCs and Subnets via Terraform.
+* **Dynamic Lookups:** Using Data Sources to fetch AMIs and other external information.
+* **Compute Management:** Provisioning EC2 instances with Terraform.
+* **Networking Foundation:** Designing VPCs and Subnets via code.
 * **State Management:** (Upcoming) Understanding the Terraform state file and locking.
 * **Variables & Outputs:** (Upcoming) Making configurations dynamic and reusable.
 * **Modular Design:** (Upcoming) Organizing resources into reusable modules.
@@ -38,3 +39,4 @@ Based on AWS best practices (SAA-C03), these labs cover:
 
 ## 📚 Labs Index
 1. [Lab 1: Provider Setup & Foundational Networking](./labs/lab1-terraform-foundation/README.md)
+2. [Lab 2: Dynamic Data Sources & Compute](./labs/lab2-terraform-compute/README.md)

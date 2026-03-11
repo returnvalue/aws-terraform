@@ -10,6 +10,7 @@ Based on AWS best practices (SAA-C03), these labs cover:
 * **Declarative Provisioning:** Defining infrastructure as code to ensure consistency and repeatability.
 * **Dynamic Lookups:** Using Data Sources to fetch AMIs and other external information.
 * **Variables & Outputs:** Making configurations dynamic, reusable, and extractable.
+* **Security as Code:** Managing IAM roles and policies via version-controlled HCL.
 * **Compute Management:** Provisioning and modifying EC2 instances via code.
 * **Networking Foundation:** Designing VPCs and Subnets via code.
 * **State Management:** (Upcoming) Understanding the Terraform state file and locking.
@@ -31,7 +32,7 @@ Based on AWS best practices (SAA-C03), these labs cover:
 
 2. Start LocalStack Pro:
    ```bash
-   docker-compose up -d
+   docker-approve up -d
    ```
 
 > [!IMPORTANT]
@@ -41,3 +42,4 @@ Based on AWS best practices (SAA-C03), these labs cover:
 1. [Lab 1: Provider Setup & Foundational Networking](./labs/lab1-terraform-foundation/README.md)
 2. [Lab 2: Dynamic Data Sources & Compute](./labs/lab2-terraform-compute/README.md)
 3. [Lab 3: Variables, Tfvars, and Outputs](./labs/lab3-terraform-variables/README.md)
+4. [Lab 4: IAM & Security as Code](./labs/lab4-terraform-iam/README.md)

@@ -1,0 +1,7 @@
+AWSTemplateFormatVersion: '2010-09-09'
+Resources:
+  AppDataBucket:
+    Type: 'AWS::S3::Bucket'
+    Properties:
+      BucketName: portfolio-app-data-bucket-12345
+      VersioningConfiguration: {Status: Enabled}

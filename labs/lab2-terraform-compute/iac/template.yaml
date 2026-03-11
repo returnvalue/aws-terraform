@@ -1,0 +1,12 @@
+AWSTemplateFormatVersion: '2010-09-09'
+Parameters:
+  AmiId: {Type: String}
+  PublicSubnetId: {Type: String}
+Resources:
+  WebServer:
+    Type: 'AWS::EC2::Instance'
+    Properties:
+      ImageId: !Ref AmiId
+      InstanceType: t3.micro
+      SubnetId: !Ref PublicSubnetId
+      Tags: [{Key: Name, Value: Terraform-Web-Server}]

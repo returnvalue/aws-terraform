@@ -1,0 +1,11 @@
+AWSTemplateFormatVersion: '2010-09-09'
+Parameters:
+  VpcId: {Type: String}
+  PublicSubnetId: {Type: String}
+Resources:
+  WebALB:
+    Type: 'AWS::ElasticLoadBalancingV2::LoadBalancer'
+    Properties: {Name: portfolio-web-alb, Subnets: [!Ref PublicSubnetId]}
+  WebTG:
+    Type: 'AWS::ElasticLoadBalancingV2::TargetGroup'
+    Properties: {Name: portfolio-web-tg, Port: 80, Protocol: HTTP, VpcId: !Ref VpcId}

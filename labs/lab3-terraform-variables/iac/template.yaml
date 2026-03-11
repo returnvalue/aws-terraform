@@ -1,0 +1,11 @@
+AWSTemplateFormatVersion: '2010-09-09'
+Parameters:
+  InstanceType: {Type: String, Default: t2.micro}
+  AmiId: {Type: String}
+  PublicSubnetId: {Type: String}
+Resources:
+  WebServer:
+    Type: 'AWS::EC2::Instance'
+    Properties: {ImageId: !Ref AmiId, InstanceType: !Ref InstanceType, SubnetId: !Ref PublicSubnetId}
+Outputs:
+  WebServerId: {Value: !Ref WebServer}

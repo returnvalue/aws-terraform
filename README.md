@@ -15,7 +15,7 @@ Based on AWS best practices (SAA-C03), these labs cover:
 * **Advanced Networking:** Deploying Application Load Balancers and Target Groups.
 * **Modular Design:** Organizing resources into reusable, standardized modules.
 * **Networking Foundation:** Designing VPCs and Subnets via code.
-* **State Management:** (Upcoming) Understanding the Terraform state file and locking.
+* **State Management:** Implementing remote state storage and locking via S3 and DynamoDB.
 
 ## ⚙️ Prerequisites
 
@@ -46,3 +46,4 @@ Based on AWS best practices (SAA-C03), these labs cover:
 4. [Lab 4: IAM & Security as Code](./labs/lab4-terraform-iam/README.md)
 5. [Lab 5: Advanced Networking (Load Balancers)](./labs/lab5-terraform-alb/README.md)
 6. [Lab 6: Modularity & Advanced State Routing (Native Terraform)](./labs/lab6-terraform-modularity/README.md)
+7. [Lab 7: Remote State Architecture](./labs/lab7-terraform-state/README.md)

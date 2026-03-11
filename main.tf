@@ -18,3 +18,22 @@ resource "aws_subnet" "public_subnet" {
     Name = "Portfolio-Public-Subnet"
   }
 }
+
+data "aws_ami" "amazon_linux" {
+  most_recent = true
+  owners      = ["amazon"]
+  filter {
+    name   = "name"
+    values = ["amzn2-ami-hvm-*-x86_64-gp2"]
+  }
+}
+
+resource "aws_instance" "web_server" {
+  ami           = data.aws_ami.amazon_linux.id
+  instance_type = var.instance_type
+  subnet_id     = aws_subnet.public_subnet.id
+
+  tags = {
+    Name = "Terraform-Web-Server"
+  }
+}

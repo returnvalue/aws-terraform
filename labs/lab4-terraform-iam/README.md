@@ -1,7 +1,6 @@
 # Lab 4: IAM & Security as Code
 
 **Goal:** Provision an IAM Role and attach a custom policy to it. Doing this via IaC ensures your security posture is version-controlled, auditable, and consistently applied across environments.
-
 ```hcl
 # 1. Create iam.tf to keep code organized
 resource "aws_iam_role" "app_role" {
@@ -29,7 +28,6 @@ resource "aws_iam_role_policy" "s3_access" {
   })
 }
 ```
-
 ```bash
 # 2. Apply the IAM changes
 tflocal apply -auto-approve

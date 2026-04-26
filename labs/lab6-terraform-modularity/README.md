@@ -1,7 +1,6 @@
 # Lab 6: Modularity & Advanced State Routing (Native Terraform)
 
 **Goal:** Create a reusable Terraform module that standardizes S3 bucket creation. To ensure reliable routing to our local environment, we will drop down to the native `terraform` CLI and enforce explicit endpoint targeting.
-
 ```hcl
 # 1. Create the module (modules/secure_s3/main.tf)
 variable "bucket_name" {}
@@ -23,7 +22,6 @@ module "app_data_bucket" {
   bucket_name = "portfolio-app-data-bucket-12345"
 }
 ```
-
 ```bash
 # 3. Clean up wrapper-generated overrides
 rm -f 'localstack_providers_override.tf'

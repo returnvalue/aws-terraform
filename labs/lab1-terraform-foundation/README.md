@@ -1,7 +1,6 @@
 # Lab 1: Provider Setup & Foundational Networking
 
 **Goal:** Define the AWS provider, initialize the working directory, and create a custom VPC and Subnet using declarative configuration.
-
 ```hcl
 # 1. Create the main configuration file (main.tf)
 provider "aws" {
@@ -25,7 +24,6 @@ resource "aws_subnet" "public_subnet" {
   }
 }
 ```
-
 ```bash
 # 2. Initialize the Terraform working directory
 tflocal init

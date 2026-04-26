@@ -1,7 +1,6 @@
 # Lab 3: Variables, Tfvars, and Outputs
 
 **Goal:** Make the infrastructure code dynamic and reusable. We will separate our hardcoded instance size into a variable, override it using a `.tfvars` file, and output the resulting EC2 instance ID to the terminal so other tools (like CI/CD pipelines) can use it.
-
 ```hcl
 # 1. Create variables.tf
 variable "instance_type" {
@@ -26,7 +25,6 @@ output "web_server_id" {
   value       = aws_instance.web_server.id
 }
 ```
-
 ```bash
 # 5. Apply the changes
 tflocal apply -auto-approve

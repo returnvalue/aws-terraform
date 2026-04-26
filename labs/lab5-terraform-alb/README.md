@@ -1,7 +1,6 @@
 # Lab 5: Advanced Networking (Load Balancers)
 
 **Goal:** Provision an Application Load Balancer (ALB) and a Target Group. Terraform automatically handles the implicit dependencies, ensuring the VPC and Subnets exist before attempting to build the ALB.
-
 ```hcl
 # 1. Create alb.tf
 resource "aws_lb" "web_alb" {
@@ -18,7 +17,6 @@ resource "aws_lb_target_group" "web_tg" {
   vpc_id   = aws_vpc.portfolio_vpc.id
 }
 ```
-
 ```bash
 # 2. Apply the Load Balancer
 tflocal apply -auto-approve

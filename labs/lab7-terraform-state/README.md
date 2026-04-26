@@ -1,7 +1,6 @@
 # Lab 7: Remote State Architecture
 
 **Goal:** Provision the S3 bucket and DynamoDB table required to safely share `terraform.tfstate` files in a collaborative team environment, preventing state corruption and enabling resource locking.
-
 ```hcl
 # 1. Create backend_infrastructure.tf
 resource "aws_s3_bucket" "terraform_state" {
@@ -25,7 +24,6 @@ resource "aws_dynamodb_table" "terraform_locks" {
   }
 }
 ```
-
 ```bash
 # 2. Apply the backend infrastructure
 terraform apply -auto-approve

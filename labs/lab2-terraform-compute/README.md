@@ -1,7 +1,6 @@
 # Lab 2: Dynamic Data Sources & Compute
 
 **Goal:** Never hardcode AMI IDs, as they change frequently and vary by region. We will use a `data` block to dynamically fetch the latest Amazon Linux 2 AMI, and provision an EC2 instance into our VPC.
-
 ```hcl
 # 1. Append the Data Source and Compute configuration to main.tf
 data "aws_ami" "amazon_linux" {
@@ -23,7 +22,6 @@ resource "aws_instance" "web_server" {
   }
 }
 ```
-
 ```bash
 # 2. Apply the new resources to create the EC2 instance
 tflocal apply -auto-approve
